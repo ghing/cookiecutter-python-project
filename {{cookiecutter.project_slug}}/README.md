@@ -28,15 +28,40 @@
 
 *TK: Instructions on how to bootstrap project, run ETL processes, etc.*
 
+### What's in here?
+
+*TK: Document important files in this project.*
+
+- `Makefile`: Defines rules for running the ETL pipeline to process source data.
+- `analysis`: Scripts and notebooks for analyzing data.
+  - `analysis/notebooks`: Jupyter notebooks for analysis should go in this directory.
+  - `analysis/archive`:  Notebooks that leave the scope of the project but should also remain in the project history will be placed here.
+- `settings.py`: Project-wide settings for use in Python scripts or Jupyter notebooks. Good to help with path resolution to data files or defining connection strings to databases.
+- `data`
+  - `data/documentation`: Documentation on data files should go here - data dictionaries, manuals, interview notes.
+  - `data/manual`: Contains data that has been manually altered (e.g. excel workbooks with inconsistent string errors requiring eyes on every row).
+  - `data/processed`: Contains data that has either been transformed from an `etl` script or output from an `analysis` jupyter notebook.
+  - `data/public`: Public-facing data files go here - data files which are 'live'.
+  - `data/source`: contains raw, untouched data.
+- `etl`: This is where we keep scripts involved with collecting data and prepping it for analysis. Try to use scripts here, insead of Jupyter notebooks.
+- `publish`: This directory holds all the documents in the project that will be public facing (e.g. data.world documents).
+- `scratch`: This directory contains output that will not be used in the project in its final form. Common cases are filtered tables or quick visualizations for reporters. This directory is not git tracked.
+
 ### Project setup instructions
 
 After cloning the git repo:
 
-`datakit data pull` to rerieve the data files.
+Install Python dependencies:
 
-Open `{{ cookiecutter.project_slug }}.Rproj` in RStudio.
+```
+pipenv install
+```
 
 *TK: For more complex or unusual projects additional directions follow*
+
+### Methods and techniques
+
+*TK: Make note of things in this project that are new, unique or clever that you might want to reuse in future projects.*
 
 ## Data notes
 

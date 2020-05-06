@@ -2,6 +2,16 @@
 
 This is a project template powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter) for use with [datakit-project](https://github.com/associatedpress/datakit-project/).
 
+It is a fork of [associatedpress/cookiecutter-python-project](https://github.com/associatedpress/cookiecutter-python-project) with these differences:
+
+- Subdirectory for Jupyter notebooks, similar to how [associatedpress/cookiecutter-r-project](https://github.com/associatedpress/cookiecutter-r-project) has an `analysis/markdown` directory. This acknowledges that there are both scripts to prepare or analyze data as well as notebooks.
+- Makefile for running ETL pipeline steps. Inspired by [Making Data, the DataMade Way](https://github.com/datamade/data-making-guidelines).
+- Placeholder for "What's in here?", "Methods and techniques" and "Data diary" sections in the README.md template.
+- Use make rules and rclone to upload HTML versions of notebooks to S3 and data to Google Drive.
+  - TODO: Consider writing a DataKit plugin to share the notebooks.
+  - TODO: Consider using [quickhand/datakit-data-gdrive](https://bitbucket.org/quickhand/datakit-data-gdrive/src/master/) for data sharing.
+- `settings.py` file similar to Django's, mostly for handling path resolution.
+
 **Structure**
 
 ```
