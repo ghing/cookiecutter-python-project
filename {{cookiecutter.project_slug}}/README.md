@@ -28,6 +28,14 @@
 
 *TK: Instructions on how to bootstrap project, run ETL processes, etc.*
 
+### Assumptions
+
+- Python 3.7+
+- Pipenv
+- GNU Make
+- Jupyter Lab
+- Rclone (for uploading data to Google Drive and shared notebooks to S3)
+
 ### What's in here?
 
 *TK: Document important files in this project.*
@@ -66,3 +74,7 @@ pipenv install
 ## Data notes
 
 *Add important caveats, limitations, and source contact info here.*
+
+## Data diary
+
+*TK: Document the steps you take as you explore the data. This is particularly important for manual steps.*
