@@ -44,7 +44,7 @@ share_notebooks: $(SHARED_NOTEBOOKS) index.html
 # Pattern rule for rendering Jupyter notebooks as HTML.
 # See https://groups.google.com/forum/#!topic/jupyter/W2M_nLbboj4 for more on
 # the technique I use to hide input/output of cells.
-$(NOTEBOOKS_DIR)/%.nb.html: $(NOTEBOOKS_DIR)/%.ipynb
+$(NOTEBOOK_DIR)/%.nb.html: $(NOTEBOOK_DIR)/%.ipynb
 	PYTHONPATH=$$(pwd) pipenv run jupyter nbconvert \
 	  --to html \
 	  --output $(notdir $@) \
